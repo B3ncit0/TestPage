@@ -1,0 +1,25 @@
+<link rel = "stylesheet" href = "app.component.css">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <a href="#" class="navbar-brand">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Eastwood_Trooper_Logo.svg/1200px-Eastwood_Trooper_Logo.svg.png"
+            height="60" alt="CoolBrand">
+        <img src="https://www.fbla-pbl.org/media/FBLA-Logo-Color.png" 
+        height="60" alt="CoolBrand">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a routerLink="/home" class="nav-item nav-link active">Home</a>
+            <a routerLink="/about" class="nav-item nav-link">About</a>
+            <a routerLink="/tests" class="nav-item nav-link">Tests</a>
+            <a routerLink="/question-maker"class="nav-item nav-link">Question Maker</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

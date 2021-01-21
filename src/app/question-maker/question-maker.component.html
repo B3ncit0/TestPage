@@ -1,0 +1,31 @@
+<body>
+
+    <h1>Question Maker</h1>
+
+    <h2>Type</h2>
+    <input [(ngModel)]="this.currentType" />
+    <hr>
+    <h2>Question</h2>
+    <input [(ngModel)]="this.currentQuestion.question" />
+    <hr>
+    <!-- <button>Save Question</button> -->
+
+    <h2>Answers</h2>
+
+    <div *ngFor="let a of this.currentQuestion.answers; let i = index">
+        <input [(ngModel)]="this.currentQuestion.answers[i+1]" />
+    </div>
+
+    <hr>
+    <button (click)="addNewAnswer()">Add Answer</button>
+
+
+    <h2>Correct Answer</h2>
+    <input [(ngModel)]="this.currentQuestion.correctAnswer" />
+    <hr>
+    <!-- <button>Save Correct Answer</button> -->
+    
+
+    <button (click)="saveQuestion()">Save Question</button>
+
+</body>

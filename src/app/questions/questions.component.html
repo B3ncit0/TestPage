@@ -1,0 +1,21 @@
+<div *ngIf="this.questionsService.currentQuestion">
+    <h1>{{this.questionsService.currentQuestion.question}}</h1>
+    <div *ngIf="this.questionsService.currentQuestion.isCorrectTF==true">
+        <h4>That is correct!</h4>
+    </div>
+    <div *ngFor="let answer of this.questionsService.currentQuestion.answers ">
+        <button (click)="this.questionsService.GetResult(answer)">{{answer}}</button>
+    </div>
+    <div *ngIf="this.questionsService.currentQuestion.isAnsweredTF">
+        <button (click)="this.questionsService.NextQuestion()">Next</button>
+    </div>
+</div>
+<div *ngIf="this.questionsService.currentQuestions">
+    <div *ngIf="this.questionsService.currentQuestions.length==0">
+        <h1>Total Right Answers {{this.questionsService.rightAnswers}}</h1>
+        <h1>Total Wrong Answers {{this.questionsService.wrongAnswers}}</h1>
+        <h2>Total points {{this.questionsService.points}}</h2>
+        <button (click)="Restart()">Restart?</button>
+    </div>
+</div>
+<button (click) = "saveQuestion()">Save Question Test</button>
